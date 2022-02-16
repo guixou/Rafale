@@ -1,0 +1,61 @@
+
+
+/*########################
+        Header
+########################*/
+
+header{
+  width: 110px;
+  padding: 3%;
+  position: fixed
+};
+
+
+/*########################
+        Main
+########################*/
+
+/*Masonery */
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+/* ---- grid ---- */
+
+.grid {
+  margin-right: 2%;
+  margin-left: 15%;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 31.333%;
+  margin: 1%;
+}
+
+.grid-item {
+  float: left;
+  overflow: hidden;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+  transition: all 0.5s;
+}
+
+.grid-item img:hover{
+  transform: scale(1.2);
+}
+
+
+
