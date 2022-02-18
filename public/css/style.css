@@ -5,10 +5,18 @@
 ########################*/
 
 header{
-  width: 110px;
+  width: 200px;
   padding: 3%;
   position: fixed
-};
+}
+
+html { 
+  overflow-y: scroll; 
+}
+
+.logo{
+  width: 100%;
+}
 
 
 /*########################
@@ -16,9 +24,6 @@ header{
 ########################*/
 
 /*Masonery */
-
-/* force scrollbar */
-html { overflow-y: scroll; }
 
 /* ---- grid ---- */
 
@@ -56,6 +61,3 @@ html { overflow-y: scroll; }
 .grid-item img:hover{
   transform: scale(1.2);
 }
-
-
-
