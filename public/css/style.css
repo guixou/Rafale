@@ -16,11 +16,29 @@ html {
 
 .logo{
   width: 100%;
+  height: 100%;
+  margin-right: 5vw;
 }
 
-.mobil{
+.buttonNav{
+  background-color: white;
+  border: 0px;
+  padding: 0;
+}
+
+.buttonNav img{
+  width: 8vw;
+
+}
+
+.buttonNav:active{
+  scale: 1.1;
+}
+
+.hidden{
   display: none;
 }
+
 
 
 /*########################
@@ -103,23 +121,33 @@ html {
 ########################*/
 
 @media (max-width: 1020px) {
-  .pc{
-    display: none;
-  }
-
-  .mobil{
-    display: block;
-    margin: auto;
-  }
 
   header{
     position: inherit;
     width: 50%;
     display: flex;
     margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    font-size: 3vw;
+  }
+
+  nav p{
+    text-align: center;
   }
 
   .grid{
     margin-left: 2%;
   }
+
+  header div{
+    display: flex;
+    margin-left: 8vw;
+    align-items: center;
+  }
+
 }
