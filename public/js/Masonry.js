@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
     
   var grid = document.querySelector('.grid');

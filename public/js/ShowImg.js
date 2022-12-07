@@ -19,9 +19,9 @@ function displayElements(pictures) {
         clone.querySelector(".grid-item").setAttribute("id", "showElement")
         clone.querySelector(".grid-item").setAttribute("data-id", picture.id)
         clone.querySelector(".grid-item").setAttribute("data-desc", picture.description)
-        clone.querySelector(".grid-item").setAttribute("data-img", `public/image/${picture.id}.jpg`)
+        clone.querySelector(".grid-item").setAttribute("data-img", `public/image/${picture.id}.webp`)
 
-        clone.querySelector(".photo").setAttribute("src", `public/image/${picture.id}.jpg`)
+        clone.querySelector(".photo").setAttribute("src", `public/image/mini/${picture.id}.webp`)
         clone.querySelector(".photo").setAttribute("alt", picture.description)
         section.appendChild(clone)
     }
@@ -34,7 +34,7 @@ function displayElements(pictures) {
         element.addEventListener("click", function(){
             const id = element.getAttribute("data-id");
             const desc = element.getAttribute("data-desc");
-            const img = `public/image/${id}.jpg`
+            const img = `public/image/original/${id}.webp`
             show(id, desc, img);
         });
     });
@@ -66,20 +66,20 @@ modal.addEventListener('click', function(){
 
 const LastProject = document.querySelector(".LastProject")
 LastProject.addEventListener('click', function(){
-    show(3, "station de lavage et décapotable", "public/image/3.jpg")
+    show(3, "station de lavage et décapotable", "public/image/original/3.webp")
 });
 
 // afficher le projet phare
 
 const bestProject = document.querySelector(".bestProject")
 bestProject.addEventListener('click', function(){
-    show(14, "TRIPLE S", "public/image/14.jpg")
+    show(14, "TRIPLE S", "public/image/original/14.webp")
 });
 
 const random = document.querySelector(".random")
 random.addEventListener('click', async function(){
     let id = getRandom(1, 23)
-    let img = `public/image/${id}.jpg`
+    let img = `public/image/original/${id}.webp`
 
     
     const pictures = await loadElements()
