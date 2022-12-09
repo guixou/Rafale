@@ -7,13 +7,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const closeNav = document.getElementById("closeNav");
     const openNav = document.getElementById("openNav");
+    const navigation = document.getElementById("nav")
     var isOpen = true
 
-    window.addEventListener('resize', function(){
+    
+    window.addEventListener('load', handleResize)
+
+    window.addEventListener('resize', handleResize)
+    
+    function handleResize(){
         // console.log(window.innerWidth)
         if (window.innerWidth > 1020) {
             closeNav.classList.add("hidden");
             openNav.classList.add("hidden");
+            navigation.classList.remove("hidden")
         } else {
             if (isOpen == true) {
                 closeNav.classList.remove("hidden");
@@ -21,12 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 openNav.classList.remove("hidden");
             }
         }
-    })
+    }
 
     /* button show nav */
-    
-    const navigation = document.getElementById("nav")
-    
 
     closeNav.addEventListener('click', function(){
         isOpen = false;

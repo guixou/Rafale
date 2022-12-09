@@ -49,6 +49,10 @@ html {
 
 /* ---- grid ---- */
 
+body{
+  background-color: rgb(238, 244, 250);
+}
+
 .grid {
   margin-right: 2%;
   margin-left: 15%;
@@ -91,16 +95,21 @@ html {
 
 .modal {
   background: rgba(26, 22, 22, 0.521);
-  width: 80%;
-  height: 90%;
-  top: 5%;
-  right: 10%;
+  width: 90%;
+  height: 80%;
+  top: 0;
+  right: 0;
   position: fixed;
   display: none;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
   color: white;
+  padding: 5%;
+  /* empécher la sélection de l'image */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
 }
 
 .modal img {
@@ -148,6 +157,10 @@ html {
     display: flex;
     margin-left: 8vw;
     align-items: center;
+  }
+
+  .modal{
+    height: 95%;
   }
 
 }
